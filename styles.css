@@ -33,8 +33,8 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Fraunces", Georgia, serif;
-  line-height: 1.15;
+  font-family: "Libre Baskerville", Georgia, serif;
+  line-height: 1.2;
   margin: 0;
 }
 
@@ -108,12 +108,13 @@ a { color: var(--coral); }
   padding: 1.1rem 1.5rem;
 }
 .brand {
-  font-family: "Fraunces", serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: #f6efe0;
   text-decoration: none;
-  letter-spacing: 0.3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .nav-links { display: flex; gap: 1.4rem; }
 .nav-links a {
@@ -146,9 +147,10 @@ a { color: var(--coral); }
   margin: 0 0 0.4rem;
 }
 .hero h1 {
-  font-size: clamp(3rem, 9vw, 6rem);
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: clamp(2px, 1.2vw, 8px);
 }
 .hero-script {
   font-family: "Caveat", cursive;
