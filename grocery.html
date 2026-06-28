@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orcas Island — Grocery Checklist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .grocery-wrap { max-width: 920px; margin: 0 auto; padding: 1.8rem 1.5rem 4rem; }
+    .backlink { font-size: 0.9rem; color: var(--teal); text-decoration: none; }
+    .grocery-wrap h1 { font-family: "Fraunces", serif; color: var(--ocean); margin: 0.6rem 0 0.2rem; font-size: clamp(1.8rem, 5vw, 2.6rem); }
+    .toolbar { display: flex; gap: 0.7rem; align-items: center; flex-wrap: wrap; margin: 1.2rem 0 1.6rem; }
+    .check-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+    .check-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1.1rem 1.3rem; box-shadow: var(--shadow); }
+    .check-card h2 { font-size: 1.05rem; color: var(--forest); margin: 0 0 0.6rem; border-bottom: 1px solid var(--line); padding-bottom: 0.45rem; }
+    .check-item { display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.28rem 0; cursor: pointer; font-size: 0.95rem; }
+    .check-item input { width: 1.1rem; height: 1.1rem; margin-top: 0.2rem; accent-color: var(--teal); flex-shrink: 0; }
+    .check-item input:checked + span { text-decoration: line-through; color: var(--muted); }
+    @media print {
+      .toolbar, .backlink { display: none !important; }
+      body { background: #fff; }
+      .grocery-wrap { padding-top: 0.5rem; }
+      .check-card { box-shadow: none; break-inside: avoid; }
+      .check-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="grocery-wrap">
+    <a class="backlink" href="index.html">← Back to itinerary</a>
+    <h1>Grocery Checklist</h1>
+    <p class="muted">Thursday-morning run · Orcas Food Co-op + Island Market, Eastsound · vegan · marathon-fueling</p>
+
+    <div class="toolbar">
+      <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+      <button class="btn secondary" id="clearBtn">Clear all</button>
+    </div>
+
+    <div class="check-grid">
+      <div class="check-card">
+        <h2>🥣 Breakfasts</h2>
+        <label class="check-item"><input type="checkbox" /><span>Rolled oats / muesli</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Granola</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Oat milk</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Almond milk</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Bread &amp; bagels</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Jam</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Peanut &amp; almond butter</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Bananas</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Berries</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Apples</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Firm tofu</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Potatoes</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Soy / coconut yogurt</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Chia seeds</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Maple syrup</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Coffee / tea</span></label>
+      </div>
+
+      <div class="check-card">
+        <h2>🏃 Run fuel &amp; snacks</h2>
+        <label class="check-item"><input type="checkbox" /><span>Medjool dates</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Nut-butter packets</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Energy bars (Clif / Larabar)</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Trail mix / nuts</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Dried fruit</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Pretzels</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Hummus</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Pita / veggies</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Electrolyte tabs (Nuun)</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Plant protein powder</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Chocolate oat milk</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Tart cherry juice</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Dark chocolate</span></label>
+      </div>
+
+      <div class="check-card">
+        <h2>🍝 Cook-at-home dinners</h2>
+        <label class="check-item"><input type="checkbox" /><span>Pasta</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Jarred marinara</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Rice</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Canned beans / lentils</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Tofu / tempeh</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Coconut milk</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Curry paste</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Salad greens</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Avocados</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Onions &amp; garlic</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Mixed veggies</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Tortillas</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Salsa</span></label>
+        <label class="check-item"><input type="checkbox" /><span>Olive oil</span></label>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const KEY = 'orcas-grocery';
+    const boxes = [...document.querySelectorAll('.check-item input')];
+    const saved = JSON.parse(localStorage.getItem(KEY) || '{}');
+    const save = () => {
+      const state = {};
+      boxes.forEach(b => { state[b.nextElementSibling.textContent.trim()] = b.checked; });
+      localStorage.setItem(KEY, JSON.stringify(state));
+    };
+    boxes.forEach(b => {
+      const k = b.nextElementSibling.textContent.trim();
+      if (saved[k]) b.checked = true;
+      b.addEventListener('change', save);
+    });
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      boxes.forEach(b => b.checked = false);
+      localStorage.removeItem(KEY);
+    });
+  </script>
+</body>
+</html>
