@@ -57,6 +57,36 @@ a { color: var(--coral); }
 .footer-icons { display: inline-block; }
 .footer-icons .ic { color: var(--gold); margin: 0 0.12em; }
 
+/* songbook lyric epigraphs */
+.song-epigraph {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-style: italic;
+  color: var(--ocean-2);
+  font-size: 0.97rem;
+  line-height: 1.55;
+  margin: 0.15rem 0 1.05rem;
+  padding: 0.15rem 0 0.15rem 0.95rem;
+  border-left: 2px solid var(--gold);
+}
+.song-cite {
+  display: block;
+  font-family: "Caveat", cursive;
+  font-style: normal;
+  color: var(--coral);
+  font-size: 1.12rem;
+  margin-top: 0.05rem;
+}
+.song-intro {
+  max-width: 62ch;
+  margin: -0.2rem 0 1.7rem;
+}
+.songbook-motto {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: var(--coral);
+  margin: 0 0 0.5rem;
+}
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
