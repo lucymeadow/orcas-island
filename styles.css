@@ -240,6 +240,8 @@ tbody tr.row-highlight { background: #fdf3ec; }
   box-shadow: var(--shadow);
 }
 .info-card h3 { font-size: 1.05rem; color: var(--forest); margin-bottom: 0.6rem; }
+.info-card.alert-card { border-color: #f0c9a8; border-left: 5px solid var(--coral); background: #fff7f0; }
+.info-card.alert-card h3 { color: var(--coral); }
 .info-card ul { margin: 0; padding-left: 1.1rem; }
 .info-card li { margin-bottom: 0.35rem; font-size: 0.93rem; }
 
