@@ -40,6 +40,23 @@ h1, h2, h3 {
 
 a { color: var(--coral); }
 
+/* hand-drawn line icons */
+.ic {
+  width: 1.05em;
+  height: 1.05em;
+  display: inline-block;
+  vertical-align: -0.15em;
+  margin-right: 0.4em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero-meta .ic { color: var(--gold); }
+.footer-icons { display: inline-block; }
+.footer-icons .ic { color: var(--gold); margin: 0 0.12em; }
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;

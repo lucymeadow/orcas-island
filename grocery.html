@@ -29,19 +29,28 @@
   </style>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-printer" viewBox="0 0 24 24"><path d="M7 8V4h10v4"/><path d="M5 8h14a2 2 0 0 1 2 2v5h-4v4H7v-4H3v-5a2 2 0 0 1 2-2z"/><path d="M7 14.5h10"/></symbol>
+      <symbol id="ic-bowl" viewBox="0 0 24 24"><path d="M3.5 11h17a8 8 0 0 1-8 8 8 8 0 0 1-8-8z"/><path d="M8.5 8c0-1.4.8-2.1 1.4-3M12.5 8c0-1.4.8-2.1 1.4-3"/></symbol>
+      <symbol id="ic-boot" viewBox="0 0 24 24"><path d="M8 3v9l-3.2 1.1C3.6 13.5 3 14.5 3 16v3h18v-2c0-2.2-1.6-3.2-3.8-3.8C14.5 12.5 11 11.5 11 8V3z"/><path d="M3 16.5h18"/></symbol>
+      <symbol id="ic-pot" viewBox="0 0 24 24"><rect x="4.5" y="9.5" width="15" height="9.5" rx="2"/><path d="M2.5 9.5h19M4.5 13H2.8M19.5 13h1.7"/><path d="M9.5 6.5c0-1 .5-1.6 1-2.2M14 6.5c0-1 .5-1.6 1-2.2"/></symbol>
+    </defs>
+  </svg>
+
   <div class="grocery-wrap">
     <a class="backlink" href="index.html">← Back to itinerary</a>
     <h1>Grocery Checklist</h1>
     <p class="muted">Thursday-morning run · Orcas Food Co-op + Island Market, Eastsound · vegan · marathon-fueling</p>
 
     <div class="toolbar">
-      <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+      <button class="btn" onclick="window.print()"><svg class="ic" aria-hidden="true"><use href="#ic-printer"/></svg>Print / Save as PDF</button>
       <button class="btn secondary" id="clearBtn">Clear all</button>
     </div>
 
     <div class="check-grid">
       <div class="check-card">
-        <h2>🥣 Breakfasts</h2>
+        <h2><svg class="ic" aria-hidden="true"><use href="#ic-bowl"/></svg>Breakfasts</h2>
         <label class="check-item"><input type="checkbox" /><span>Rolled oats / muesli</span></label>
         <label class="check-item"><input type="checkbox" /><span>Granola</span></label>
         <label class="check-item"><input type="checkbox" /><span>Oat milk</span></label>
@@ -61,7 +70,7 @@
       </div>
 
       <div class="check-card">
-        <h2>🏃 Run fuel &amp; snacks</h2>
+        <h2><svg class="ic" aria-hidden="true"><use href="#ic-boot"/></svg>Run fuel &amp; snacks</h2>
         <label class="check-item"><input type="checkbox" /><span>Medjool dates</span></label>
         <label class="check-item"><input type="checkbox" /><span>Nut-butter packets</span></label>
         <label class="check-item"><input type="checkbox" /><span>Energy bars (Clif / Larabar)</span></label>
@@ -78,7 +87,7 @@
       </div>
 
       <div class="check-card">
-        <h2>🍝 Cook-at-home dinners</h2>
+        <h2><svg class="ic" aria-hidden="true"><use href="#ic-pot"/></svg>Cook-at-home dinners</h2>
         <label class="check-item"><input type="checkbox" /><span>Pasta</span></label>
         <label class="check-item"><input type="checkbox" /><span>Jarred marinara</span></label>
         <label class="check-item"><input type="checkbox" /><span>Rice</span></label>
